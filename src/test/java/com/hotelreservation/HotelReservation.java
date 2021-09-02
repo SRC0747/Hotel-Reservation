@@ -58,14 +58,14 @@ public class HotelReservation {
         if (hotel == "BridgeWood") {
             int weekday_rate = 150;
             int weekend_rate = 50;
-            System.out.println("Weekday Rate of Regular Customers of LakeWood Hotel:" + weekday_rate);
-            System.out.println("Weekend Rate of Regular Customers of LakeWood Hotel:" + weekend_rate);
+            System.out.println("Weekday Rate of Regular Customers of BrdgeWood Hotel:" + weekday_rate);
+            System.out.println("Weekend Rate of Regular Customers of BridgeWood Hotel:" + weekend_rate);
         }
         if (hotel == "RidgeWood") {
             int weekday_rate = 220;
             int weekend_rate = 150;
-            System.out.println("Weekday Rate of Regular Customers of LakeWood Hotel:" + weekday_rate);
-            System.out.println("Weekend Rate of Regular Customers of LakeWood Hotel:" + weekend_rate);
+            System.out.println("Weekday Rate of Regular Customers of RidgeWood Hotel:" + weekday_rate);
+            System.out.println("Weekend Rate of Regular Customers of RidgeWood Hotel:" + weekend_rate);
         }
     }
     public void cheapest_weekday_weekend_hotel(){
@@ -80,13 +80,13 @@ public class HotelReservation {
             int weekday_rate = 150;
             int weekend_rate = 50;
             sum_BridgeWood = (sum_BridgeWood+weekday_rate+weekend_rate);
-            System.out.println("Total Weekday and Weekend rate of LakeWood Hotel:" + sum_BridgeWood);
+            System.out.println("Total Weekday and Weekend rate of BridgeWood Hotel:" + sum_BridgeWood);
         }
         if (hotel == "RidgeWood") {
             int weekday_rate = 220;
             int weekend_rate = 150;
             sum_RidgeWood = (sum_RidgeWood+weekday_rate+weekend_rate);
-            System.out.println("Total Weekday and Weekend rate of LakeWood Hotel:" + sum_RidgeWood);
+            System.out.println("Total Weekday and Weekend rate of RidgeWood Hotel:" + sum_RidgeWood);
         }
         if (sum_LakeWood<=sum_BridgeWood && sum_LakeWood<sum_RidgeWood){
             System.out.println("LakeWood and BridgeWood with total rates $200.");
