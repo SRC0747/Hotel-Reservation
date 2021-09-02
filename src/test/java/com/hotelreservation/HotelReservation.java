@@ -68,6 +68,36 @@ public class HotelReservation {
             System.out.println("Weekend Rate of Regular Customers of LakeWood Hotel:" + weekend_rate);
         }
     }
+    public void cheapest_weekday_weekend_hotel(){
+        int sum_LakeWood = 0,sum_BridgeWood = 0, sum_RidgeWood = 0;
+        if (hotel == "LakeWood") {
+            int weekday_rate = 110;
+            int weekend_rate = 90;
+            sum_LakeWood = (sum_LakeWood+weekday_rate+weekend_rate);
+            System.out.println("Total Weekday and Weekend rate of LakeWood Hotel:" + sum_LakeWood);
+        }
+        if (hotel == "BridgeWood") {
+            int weekday_rate = 150;
+            int weekend_rate = 50;
+            sum_BridgeWood = (sum_BridgeWood+weekday_rate+weekend_rate);
+            System.out.println("Total Weekday and Weekend rate of LakeWood Hotel:" + sum_BridgeWood);
+        }
+        if (hotel == "RidgeWood") {
+            int weekday_rate = 220;
+            int weekend_rate = 150;
+            sum_RidgeWood = (sum_RidgeWood+weekday_rate+weekend_rate);
+            System.out.println("Total Weekday and Weekend rate of LakeWood Hotel:" + sum_RidgeWood);
+        }
+        if (sum_LakeWood<=sum_BridgeWood && sum_LakeWood<sum_RidgeWood){
+            System.out.println("LakeWood and BridgeWood with total rates $200.");
+        }
+        if (sum_BridgeWood<=sum_LakeWood && sum_BridgeWood<sum_RidgeWood){
+            System.out.println("LakeWood and BridgeWood with total rates $200.");
+        }
+        if (sum_RidgeWood<sum_LakeWood && sum_RidgeWood<sum_BridgeWood){
+            System.out.println("RidgeWood with total rates $370.");
+        }
+    }
     public static void main(String[] args) throws Exception {
         HotelReservation hotel1 = new HotelReservation("LakeWood","Regular");
         HotelReservation hotel2 = new HotelReservation("BridgeWood","Regular");
@@ -82,9 +112,15 @@ public class HotelReservation {
         System.out.println(sDate1+"\t"+date1);
         System.out.println(sDate2+"\t"+date2);
         HotelReservation hotel = new HotelReservation();
+        //Checking cheapest rated Hotel.
         hotel.cheapestHotel();
+        //Calculating Weekday and Weekend rates of each hotel.
         hotel1.weekday_weekend_rate();;
         hotel2.weekday_weekend_rate();
         hotel3.weekday_weekend_rate();
+        //Checking Cheapest Weekday and Weekend rated Hotel.
+        hotel1.cheapest_weekday_weekend_hotel();
+        hotel2.cheapest_weekday_weekend_hotel();
+        hotel3.cheapest_weekday_weekend_hotel();
     }
 }

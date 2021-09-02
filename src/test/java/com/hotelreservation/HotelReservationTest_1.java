@@ -28,4 +28,11 @@ class HotelReservationTest_1{
         obj_hotel2.weekday_weekend_rate();
         obj_hotel3.weekday_weekend_rate();
     }
+
+    @Test
+    public void toCheck_Cheapest_Weekday_Weekend_Hotel() {
+        obj_hotel1.cheapest_weekday_weekend_hotel();
+        obj_hotel2.cheapest_weekday_weekend_hotel();
+        obj_hotel3.cheapest_weekday_weekend_hotel();
+    }
 }
