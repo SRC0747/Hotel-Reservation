@@ -42,4 +42,9 @@ class HotelReservationTest_1{
         obj_hotel2.hotel_rating();
         obj_hotel3.hotel_rating();
     }
+
+    @Test
+    public void toCheck_cheapest_bestRated_hotel() {
+        obj_hotel2.cheapest_bestRated_hotel();
+    }
 }

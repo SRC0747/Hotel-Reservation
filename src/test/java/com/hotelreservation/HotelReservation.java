@@ -103,10 +103,34 @@ public class HotelReservation {
             System.out.println("LakeWood rating is 3.");
         }
         if (hotel == "BridgeWood"){
-            System.out.println("LakeWood rating is 4.");
+            System.out.println("BridgeWood rating is 4.");
         }
         if (hotel == "RidgeWood"){
-            System.out.println("LakeWood rating is 5.");
+            System.out.println("RidgeWood rating is 5.");
+        }
+    }
+    public void cheapest_bestRated_hotel(){
+        int sum_LakeWood = 0,sum_BridgeWood = 0, sum_RidgeWood = 0;
+        int LakeWood_Rate =3, BridgeWood_Rate=4, RidgeWood_Rate=5;
+        if (hotel == "LakeWood") {
+            int weekday_rate = 110;
+            int weekend_rate = 90;
+            sum_LakeWood = (sum_LakeWood+weekday_rate+weekend_rate);
+        }
+        if (hotel == "BridgeWood") {
+            int weekday_rate = 150;
+            int weekend_rate = 50;
+            sum_BridgeWood = (sum_BridgeWood+weekday_rate+weekend_rate);
+        }
+        if (hotel == "RidgeWood") {
+            int weekday_rate = 220;
+            int weekend_rate = 150;
+            sum_RidgeWood = (sum_RidgeWood+weekday_rate+weekend_rate);
+        }
+        if ((sum_BridgeWood<=sum_LakeWood && sum_BridgeWood<sum_RidgeWood) && (LakeWood_Rate<BridgeWood_Rate && BridgeWood_Rate<RidgeWood_Rate)){
+            System.out.println("BridgeWood");
+            System.out.println("Rating:"+BridgeWood_Rate);
+            System.out.println("Total Rates: $"+sum_BridgeWood);
         }
     }
     public static void main(String[] args) throws Exception {
@@ -133,9 +157,13 @@ public class HotelReservation {
         hotel1.cheapest_weekday_weekend_hotel();
         hotel2.cheapest_weekday_weekend_hotel();
         hotel3.cheapest_weekday_weekend_hotel();
+
         //Checking the rating of the Hotels.
         hotel1.hotel_rating();
         hotel2.hotel_rating();
         hotel3.hotel_rating();
+
+        //Checking the Best Rated Cheapest Hotel.
+        hotel2.cheapest_bestRated_hotel();
     }
 }
