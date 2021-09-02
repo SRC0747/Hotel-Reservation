@@ -58,14 +58,14 @@ public class HotelReservation {
         if (hotel == "BridgeWood") {
             int weekday_rate = 150;
             int weekend_rate = 50;
-            System.out.println("Weekday Rate of Regular Customers of LakeWood Hotel:" + weekday_rate);
-            System.out.println("Weekend Rate of Regular Customers of LakeWood Hotel:" + weekend_rate);
+            System.out.println("Weekday Rate of Regular Customers of BridgeWood Hotel:" + weekday_rate);
+            System.out.println("Weekend Rate of Regular Customers of BridgeWood Hotel:" + weekend_rate);
         }
         if (hotel == "RidgeWood") {
             int weekday_rate = 220;
             int weekend_rate = 150;
-            System.out.println("Weekday Rate of Regular Customers of LakeWood Hotel:" + weekday_rate);
-            System.out.println("Weekend Rate of Regular Customers of LakeWood Hotel:" + weekend_rate);
+            System.out.println("Weekday Rate of Regular Customers of RidgeWood Hotel:" + weekday_rate);
+            System.out.println("Weekend Rate of Regular Customers of RidgeWood Hotel:" + weekend_rate);
         }
     }
     public static void main(String[] args) throws Exception {
