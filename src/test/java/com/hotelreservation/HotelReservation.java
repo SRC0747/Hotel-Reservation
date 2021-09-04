@@ -179,6 +179,31 @@ public class HotelReservation {
             System.out.println("Weekend Rate of Regular Customers of RidgeWood Hotel:" + weekend_rate);
         }
     }
+
+    public void cheapest_bestRated_hotel_RewardCustomer(){
+        int sum_LakeWood = 0,sum_BridgeWood = 0, sum_RidgeWood = 0;
+        int LakeWood_Rate =3, BridgeWood_Rate=4, RidgeWood_Rate=5;
+        if (hotel == "LakeWood") {
+            int weekday_rate = 80;
+            int weekend_rate = 80;
+            sum_LakeWood = (sum_LakeWood+weekday_rate+weekend_rate);
+        }
+        if (hotel == "BridgeWood") {
+            int weekday_rate = 110;
+            int weekend_rate = 50;
+            sum_BridgeWood = (sum_BridgeWood+weekday_rate+weekend_rate);
+        }
+        if (hotel == "RidgeWood") {
+            int weekday_rate = 100;
+            int weekend_rate = 40;
+            sum_RidgeWood = (sum_RidgeWood+weekday_rate+weekend_rate);
+        }
+        if ((sum_RidgeWood<=sum_LakeWood && sum_RidgeWood<sum_BridgeWood) && (LakeWood_Rate<BridgeWood_Rate && BridgeWood_Rate<RidgeWood_Rate)){
+            System.out.println("RidgeWood");
+            System.out.println("Rating:"+RidgeWood_Rate);
+            System.out.println("Total Rates: $"+sum_RidgeWood);
+        }
+    }
     public static void main(String[] args) throws Exception {
         HotelReservation hotel1 = new HotelReservation("LakeWood","Regular");
         HotelReservation hotel2 = new HotelReservation("BridgeWood","Regular");
@@ -222,5 +247,10 @@ public class HotelReservation {
         hotel1_rewardCustomer.weekday_weekend_rate_RewardCustomers();
         hotel2_rewardCustomer.weekday_weekend_rate_RewardCustomers();
         hotel3_rewardCustomer.weekday_weekend_rate_RewardCustomers();
+
+        //Displaying Cheapest Best Rated Hotel for Reward Customers.
+        hotel1_rewardCustomer.cheapest_bestRated_hotel_RewardCustomer();
+        hotel2_rewardCustomer.cheapest_bestRated_hotel_RewardCustomer();
+        hotel3_rewardCustomer.cheapest_bestRated_hotel_RewardCustomer();
     }
 }

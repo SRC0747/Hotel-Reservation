@@ -62,4 +62,11 @@ class HotelReservationTest_1{
         obj_hotel2_RewardCustomer.weekday_weekend_rate_RewardCustomers();
         obj_hotel3_RewardCustomer.weekday_weekend_rate_RewardCustomers();
     }
+
+    @Test
+    public void toCheck_Cheapest_BestRated_RewardCustomer() {
+        obj_hotel1.cheapest_bestRated_hotel_RewardCustomer();
+        obj_hotel2.cheapest_bestRated_hotel_RewardCustomer();
+        obj_hotel3.cheapest_bestRated_hotel_RewardCustomer();
+    }
 }
