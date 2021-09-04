@@ -179,7 +179,7 @@ public class HotelReservation {
             System.out.println("Weekend Rate of Regular Customers of RidgeWood Hotel:" + weekend_rate);
         }
     }
-
+    //Cheapest Best Rated hotel for Reward Customers.
     public void cheapest_bestRated_hotel_RewardCustomer(){
         int sum_LakeWood = 0,sum_BridgeWood = 0, sum_RidgeWood = 0;
         int LakeWood_Rate =3, BridgeWood_Rate=4, RidgeWood_Rate=5;
