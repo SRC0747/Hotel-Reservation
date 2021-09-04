@@ -64,9 +64,16 @@ class HotelReservationTest_1{
     }
 
     @Test
-    public void toCheck_Cheapest_BestRated_RewardCustomer() {
+    public void toCheck_Cheapest_BestRatedHotel_RewardCustomer() {
         obj_hotel1.cheapest_bestRated_hotel_RewardCustomer();
         obj_hotel2.cheapest_bestRated_hotel_RewardCustomer();
         obj_hotel3.cheapest_bestRated_hotel_RewardCustomer();
+    }
+
+    @Test
+    public void toCheck_Costiest_BestRatedHotel_RewardCustomer() {
+        obj_hotel1.costiest_bestRated_hotel_RewardCustomer();
+        obj_hotel2.costiest_bestRated_hotel_RewardCustomer();
+        obj_hotel3.costiest_bestRated_hotel_RewardCustomer();
     }
 }
