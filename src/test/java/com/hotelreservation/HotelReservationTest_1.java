@@ -52,4 +52,14 @@ class HotelReservationTest_1{
     public void toCheck_costly_bestRated_hotel() {
         obj_hotel3.costly_bestRated_hotel();
     }
+
+    @Test
+    public void toCheck_WeekdayWeekend_RewardCustomer() {
+        HotelReservation obj_hotel1_RewardCustomer = new HotelReservation("LakeWood","Regular");
+        HotelReservation obj_hotel2_RewardCustomer = new HotelReservation("BridgeWood","Regular");
+        HotelReservation obj_hotel3_RewardCustomer = new HotelReservation("RidgeWood","Regular");
+        obj_hotel1_RewardCustomer.weekday_weekend_rate_RewardCustomers();
+        obj_hotel2_RewardCustomer.weekday_weekend_rate_RewardCustomers();
+        obj_hotel3_RewardCustomer.weekday_weekend_rate_RewardCustomers();
+    }
 }

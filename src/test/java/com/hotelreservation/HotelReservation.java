@@ -58,14 +58,14 @@ public class HotelReservation {
         if (hotel == "BridgeWood") {
             int weekday_rate = 150;
             int weekend_rate = 50;
-            System.out.println("Weekday Rate of Regular Customers of LakeWood Hotel:" + weekday_rate);
-            System.out.println("Weekend Rate of Regular Customers of LakeWood Hotel:" + weekend_rate);
+            System.out.println("Weekday Rate of Regular Customers of BridgeWood Hotel:" + weekday_rate);
+            System.out.println("Weekend Rate of Regular Customers of BridgeWood Hotel:" + weekend_rate);
         }
         if (hotel == "RidgeWood") {
             int weekday_rate = 220;
             int weekend_rate = 150;
-            System.out.println("Weekday Rate of Regular Customers of LakeWood Hotel:" + weekday_rate);
-            System.out.println("Weekend Rate of Regular Customers of LakeWood Hotel:" + weekend_rate);
+            System.out.println("Weekday Rate of Regular Customers of RidgeWood Hotel:" + weekday_rate);
+            System.out.println("Weekend Rate of Regular Customers of RidgeWood Hotel:" + weekend_rate);
         }
     }
     public void cheapest_weekday_weekend_hotel(){
@@ -157,6 +157,28 @@ public class HotelReservation {
             System.out.println("Total Rates: $"+sum_RidgeWood);
         }
     }
+
+    //Calculating WeekDay and Weekend Rate of Reward Customers of Each Hotel.
+    public void weekday_weekend_rate_RewardCustomers(){
+        if (hotel == "LakeWood") {
+            int weekday_rate = 80;
+            int weekend_rate = 80;
+            System.out.println("Weekday Rate of Regular Customers of LakeWood Hotel:" + weekday_rate);
+            System.out.println("Weekend Rate of Regular Customers of LakeWood Hotel:" + weekend_rate);
+        }
+        if (hotel == "BridgeWood") {
+            int weekday_rate = 110;
+            int weekend_rate = 50;
+            System.out.println("Weekday Rate of Regular Customers of BridgeWood Hotel:" + weekday_rate);
+            System.out.println("Weekend Rate of Regular Customers of BridgeWood Hotel:" + weekend_rate);
+        }
+        if (hotel == "RidgeWood") {
+            int weekday_rate = 110;
+            int weekend_rate = 40;
+            System.out.println("Weekday Rate of Regular Customers of RidgeWood Hotel:" + weekday_rate);
+            System.out.println("Weekend Rate of Regular Customers of RidgeWood Hotel:" + weekend_rate);
+        }
+    }
     public static void main(String[] args) throws Exception {
         HotelReservation hotel1 = new HotelReservation("LakeWood","Regular");
         HotelReservation hotel2 = new HotelReservation("BridgeWood","Regular");
@@ -192,5 +214,13 @@ public class HotelReservation {
 
         //Checking the Best Rated Costly Hotel.
         hotel3.costly_bestRated_hotel();
+
+        //Checking the WeekDay and WeekEnd Rate of Reward Customers.
+        HotelReservation hotel1_rewardCustomer = new HotelReservation("LakeWood","Reward");
+        HotelReservation hotel2_rewardCustomer = new HotelReservation("BridgeWood","Reward");
+        HotelReservation hotel3_rewardCustomer = new HotelReservation("RidgeWood","Reward");
+        hotel1_rewardCustomer.weekday_weekend_rate_RewardCustomers();
+        hotel2_rewardCustomer.weekday_weekend_rate_RewardCustomers();
+        hotel3_rewardCustomer.weekday_weekend_rate_RewardCustomers();
     }
 }
